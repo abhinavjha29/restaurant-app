@@ -21,10 +21,38 @@
 .card-text {
   color: wheat;
 }
-.card-body {
+.summary-card {
   background-color: brown;
 }
 
 .card-title {
   color: white;
+}
+.meal-name {
+  color: red;
+}
+.meal-btn {
+  text-align: right;
+}
+.card-body {
+  position: relative;
+}
+
+.meal-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+.cart-add {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 50px;
+}
+cart-add::-webkit-outer-spin-button,
+.cart-add::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

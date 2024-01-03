@@ -15,7 +15,8 @@ function App() {
   return (
     <>
       <Header></Header>
-      <main className="container">
+
+      <main className="main">
         <Summary></Summary>
 
         <Meallist mealItems={mealItems}></Meallist>

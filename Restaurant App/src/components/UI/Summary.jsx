@@ -1,7 +1,7 @@
 const Summary = () => {
   return (
     <div className="card w-50 mb-3 summary">
-      <div className="card-body ">
+      <div className="card-body summary-card">
         <h4 className="card-title">Delcious Food , served to you</h4>
         <p className="card-text">
           "Culinary Delights Await! Explore a delectable array of dishes and
