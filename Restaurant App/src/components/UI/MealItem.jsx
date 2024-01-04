@@ -1,7 +1,7 @@
 const MealItem = ({ name, description, price }) => {
   return (
     <div class="card">
-      <div class="card-body">
+      <div class="card-body Meal-card">
         <h5 class="card-title meal-name">{name}</h5>
         <h6 class="card-subtitle mb-2 text-body-secondary mealdescription">
           {description}

@@ -5,6 +5,7 @@ import "./App.css";
 import Header from "./components/UI/Header";
 import Summary from "./components/UI/Summary";
 import Meallist from "./components/UI/Meallist";
+import Modal from "./components/overlay/modal";
 
 function App() {
   const mealItems = [
@@ -15,7 +16,7 @@ function App() {
   return (
     <>
       <Header></Header>
-
+      <Modal></Modal>
       <main className="main">
         <Summary></Summary>
 
