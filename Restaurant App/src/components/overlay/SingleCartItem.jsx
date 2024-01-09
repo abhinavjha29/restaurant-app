@@ -11,7 +11,7 @@ const SingleCartItem = ({ name, price }) => {
           <button type="button">
             <CiSquarePlus />
           </button>
-          <input type="number" value={1} />
+          <input type="number" defaultValue={1} />
           <button>
             <CiSquareMinus />
           </button>

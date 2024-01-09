@@ -1,23 +1,41 @@
-import SingleCartItem from "./SingleCartItem";
+import Modal from "./Modal";
 
-const Cart = () => {
-  const defaul_val = [
-    { id: 1, name: "Pasta", description: "Delicious pasta dish", price: 12.99 },
-  ];
+import classes from "./Cart.module.css";
+
+const Cart = (props) => {
+  const cartItems = (
+    <ul className={classes["cart-items"]}>
+      {[{ id: "c1", name: "Sushi", amount: 2, price: 12.99 }].map((item) => (
+        <li>{item.name}</li>
+      ))}
+    </ul>
+  );
+
   return (
-    <>
-      <ul class="list-group">
-        {defaul_val.map((item) => (
-          <li class="list-group-item">
-            <SingleCartItem
-              name={item.name}
-              price={item.price}
-            ></SingleCartItem>
-          </li>
-        ))}
-      </ul>
-      <div>Total Amount : 35</div>
-    </>
+    <Modal>
+      {cartItems}
+      <div className={classes.total}>
+        <span>Total Amount</span>
+        <span>35.62</span>
+      </div>
+      <div className={classes.actions}>
+        <button
+          className={classes["button--alt"]}
+          onClick={() => props.SetSelectedModal("Home")}
+        >
+          Close
+        </button>
+        <button
+          className={classes.button}
+          onClick={() => {
+            console.log(".... orodering");
+          }}
+        >
+          Order
+        </button>
+      </div>
+    </Modal>
   );
 };
+
 export default Cart;

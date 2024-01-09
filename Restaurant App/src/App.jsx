@@ -1,13 +1,14 @@
-// import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
 import Header from "./components/UI/Header";
 import Summary from "./components/UI/Summary";
 import Meallist from "./components/UI/Meallist";
-import Modal from "./components/overlay/modal";
+import Cart from "./components/overlay/Cart";
+import { useState } from "react";
 
 function App() {
+  const [selectedModal, SetSelectedModal] = useState("Home");
   const mealItems = [
     { id: 1, name: "Pasta", description: "Delicious pasta dish", price: 12.99 },
     { id: 2, name: "Salad", description: "Fresh salad mix", price: 8.49 },
@@ -15,8 +16,14 @@ function App() {
   ];
   return (
     <>
-      <Header></Header>
-      <Modal></Modal>
+      {selectedModal === "Cart" && (
+        <Cart
+          selectedModal={selectedModal}
+          SetSelectedModal={SetSelectedModal}
+        />
+      )}
+      <Header SetSelectedModal={SetSelectedModal}></Header>
+
       <main className="main">
         <Summary></Summary>
 

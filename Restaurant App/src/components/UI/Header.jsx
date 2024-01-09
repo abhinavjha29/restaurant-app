@@ -1,4 +1,4 @@
-const Header = () => {
+const Header = ({ SetSelectedModal }) => {
   return (
     <header className="p-3 text header">
       <div className="container">
@@ -17,7 +17,11 @@ const Header = () => {
           </ul>
 
           <div className="text-end">
-            <button type="button" className="btn btn-warning">
+            <button
+              type="button"
+              className="btn btn-warning"
+              onClick={() => SetSelectedModal("Cart")}
+            >
               Your Cart <span className="badge text-bg-secondary">0</span>
             </button>
           </div>
